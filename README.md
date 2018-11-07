@@ -17,6 +17,22 @@ Confio suficiente en los *frameworks* y que me facilitarán la vida.
 * Tener un material de referencia.
 Este material sé que será valioso para poder compartir con otros que estén en situaciones similares a la mía y que deseen hacer interfaces o aplicaciones atractivas.
 
+# Creando una imagen de Docker
+
+`docker build -t josanabr/npm:devel .`
+
+# Corriendo un contenedor 
+
+`docker run --rm -it -p 3000:3000 -v $(pwd):/myhome josanabr/npm:devel /bin/bash`
+
+Una vez dentro del contenedor, ejecutar lo siguiente:
+
+```
+cd /work/sample-app
+cp /myhome/App.js src
+npm start
+```
+
 # Webgrafía
 
 * [The Beginner's Guide to React](https://egghead.io/courses/the-beginner-s-guide-to-react)
